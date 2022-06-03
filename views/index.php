@@ -41,7 +41,7 @@
             <img src="../assets/img/products6.jpg">
         </div>
         <br>
-        <div class="flex-center">
+        <div>
             <div class="dot-container">
                 <span class="dots" onclick="showSlides(0)"></span>
                 <span class="dots" onclick="showSlides(1)"></span>
