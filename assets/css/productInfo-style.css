@@ -71,6 +71,10 @@
         text-align: justify;
     }
 
+    #newComment {
+        margin: 0 auto;
+    }
+
     .comment-container {
         max-width: 760px;
         min-width: 760px;
