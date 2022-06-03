@@ -1,0 +1,268 @@
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/Lato-Regular.ttf);
+    font-weight: 400;
+}
+
+:root {
+    --color-header: #53A0DF;
+    --color-footer: #2A4F6E;
+    --color-background: #e4f4fd;
+    --color-primary-button: #64c6ff;
+    --color-primary-button-hover: #4ab7f6;
+    --height-header-mobile: 100px;
+    --height-header-PC: 175px;
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+html,
+body
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 { 
+    font-size: 2.5rem; 
+}
+
+h2 { 
+    font-size: 2.25rem; 
+}
+
+h3 { 
+    font-size: 2rem; 
+}
+
+h4 { 
+    font-size: 1.75rem; 
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu {
+    background-color: var(--color-header);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: var(--height-header-mobile); 
+    max-height: var(--height-header-mobile);
+}
+
+.header {
+    display: inline-block;
+}
+
+#logo-section {
+    display: none;
+}
+
+.img-logo {
+    width: 150px;
+    height: 150px;
+}
+
+
+body {
+    background-color: var(--color-background);
+}
+
+.grid-margin-p {
+    width: calc(100% - 32px);
+    padding-left: 16px;
+    text-align: justify;
+    text-justify: inter-word
+}
+    
+
+form > * + * {
+    display: block;
+    margin: 0.3em;
+}
+
+input {
+    border-radius: 0.25em;
+    font-size: 1em;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: rgb(19, 0, 167);
+    box-shadow: 0 0 5px rgb(174, 174, 174);
+}
+
+textarea {
+    resize: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.group-horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.group-horizontal label {
+    width: 30%;
+}
+
+.group-horizontal input {
+    width: 70%;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type="submit"], input[type="button"] {
+    cursor: pointer;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.error {
+    background-color: lightcoral;
+    text-align: center;
+    width: 100%;
+    padding : 0.1em;
+}
+
+.primary-button {
+    padding: 0.4em;
+    border: 1px solid black;
+    background-color: var(--color-primary-button);
+    color: black;
+}
+
+.secondary-button {
+    padding: 0.4em;
+    border: 1px solid blue;
+    background-color: white;
+    color: black;
+}
+
+.primary-button:hover {
+    border: 1.1px solid black;
+    background-color: var(--color-primary-button-hover);
+    color: black;
+    box-shadow: -1px 1px darkslategrey;
+}
+
+.secondary-button:hover {
+    border: 1.1px solid blue;
+    background-color: lightgray;
+    color: black;
+    box-shadow: -1px 1px darkblue;
+}
+
+@media (min-width: 768px) {
+ 
+    header {
+        min-height: var(--height-header-PC);
+        max-height: var(--height-header-PC);
+    }
+
+    #logo-section{
+        display: inline;
+        width: 150px;
+        height: 150px;
+    }
+
+    .grid-margin-p {
+        width: calc(100% - 64px);
+        padding-left: 32px;
+        text-align: justify;
+        text-justify: inter-word
+    }
+
+    .modal {
+        display: none;
+        z-index: 1050;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-x: auto;
+        background-color: rgba(0, 0, 0, 0.25);
+        transition: display ease 1000ms;
+        -webkit-transition: display ease 1000ms;
+    }
+
+    .modal-dialog {
+        width: 500px;
+        margin-inline: auto;
+        margin-block: 2em;
+    }
+    
+    .modal-content {
+        background-color: white;
+        border-radius: 0.5em;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transition: opacity ease 1000ms;
+        -webkit-transition: opacity ease 1000ms;
+    }
+    
+    .modal.show .modal-content {
+        opacity: 1;
+    }
+    
+    .modal-header, .modal-body, .modal-footer {
+        padding: 1em;
+    }
+    
+    .modal-header {
+        border-bottom: 1px solid lightgray;
+    }
+    
+    .modal-footer {
+        border-top: 1px solid lightgray;
+    }
+    
+    .modal-header > * {
+        margin: 0;
+    }
+    
+    .show {
+        display: block;
+    }
+
+    .error {
+        background-color: lightcoral;
+        text-align: center;
+        width: 760px;
+        padding : 0.1em;
+        margin: 0 auto;
+    }
+}

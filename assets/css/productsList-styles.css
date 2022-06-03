@@ -1,0 +1,72 @@
+table { 
+    border-collapse: collapse;
+    margin: 0.8em auto;
+}
+
+th, td { 
+    border: solid 1.2px black; 
+}
+
+td > *, th > * {
+    margin: 0.7em;
+    padding: 0.5em;
+}
+
+#div-newProduct{
+    display: flex;
+    flex-direction: column;
+}
+
+card-login {
+    border: 1px solid lightblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    padding: 0.3em;
+    background-color: #ecf8fc;
+    border-radius: 0.2em; 
+}
+
+.form-group > * {
+    --flow-space: 0.5em;
+    display: block;
+}
+
+form[class="form-signup"] > label, input{
+    margin: 0.4em 0.5em;
+}
+
+.group-horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.group-horizontal label {
+    width: 30%;
+    font-size: 1.0rem;
+}
+
+.group-horizontal input {
+    width: 70%;
+    height: 25px;
+}
+
+
+@media (min-width: 768px) {
+
+    .card-login {
+        min-width: 750px;
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .group-horizontal input {
+        width: 70%;
+        height: 40px;
+    }
+
+    .group-horizontal label {
+        width: 30%;
+        font-size: 1.5rem;
+    }
+}

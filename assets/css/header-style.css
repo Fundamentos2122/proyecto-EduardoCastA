@@ -1,0 +1,111 @@
+:root {
+    --height-header-mobile: 100px;
+    --height-header-PC: 175px;
+}
+
+body {
+    padding-top: var(--height-header-mobile); 
+}
+
+.header {
+    position: relative;
+}
+
+.img-logo-header {
+    display: none;
+}
+
+.header a {
+    font-size: 1em;
+}
+
+#link1 {
+    position: absolute;
+    top: 72px;
+    left: 16px;
+}
+
+#link2 {
+    position: absolute;
+    top: 72px;
+    left: 64px;
+}
+
+#link3 {
+    position: absolute;
+    top: 72px;
+    right: 108px;
+}
+
+#link4 {
+    position: absolute;
+    top: 72px;
+    right: 16px;
+}
+
+#img1 {
+    position: absolute;
+    top: 18px;
+    right: 133px;
+}
+
+#img2 {
+    position: absolute;
+    top: 18px;
+    right: 36px;
+}
+
+@media (min-width: 768px) {
+
+    .img-logo-header {
+        display: inline;
+        max-width: 80px;
+        width: 80px;
+        height: 80px;
+        max-height: 80px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+    }
+
+    .header a {
+        font-size: 1.1em;
+    }
+
+    #link1 {
+        position: absolute;
+        top: 72px;
+        left: 96px;
+    }
+    
+    #link2 {
+        position: absolute;
+        top: 72px;
+        left: 142px;
+    }
+    
+    #link3 {
+        position: absolute;
+        top: 72px;
+        right: 156px;
+    }
+    
+    #link4 {
+        position: absolute;
+        top: 72px;
+        right: 64px;
+    }
+
+    #img1 {
+        position: absolute;
+        top: 18px;
+        right: 182px;
+    }
+    
+    #img2 {
+        position: absolute;
+        top: 18px;
+        right: 86px;
+    }
+
+}
