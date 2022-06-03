@@ -142,12 +142,15 @@ if($_SERVER["REQUEST_METHOD"] === "GET") {
 
     } else if($_POST["_method"] === "DELETE") { //Eliminar un producto
 
+        console_log($_POST);
+
         $id = $_POST["id"];
 
         try {
             
             $query = $connection->prepare('UPDATE products SET active = 0 WHERE id = :id');
             $query->bindParam(':id', $id, PDO::PARAM_INT);
+            $query->execute();
 
             if($query->rowCount === 0) {
                 header('Location: http://localhost/electrops/views/productsList.php?error=4');

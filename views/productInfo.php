@@ -28,7 +28,7 @@
             if(array_key_exists("username", $_SESSION) || (array_key_exists("username", $_SESSION) && $_SESSION["type"] === "normal")) {
                 echo "<div id=\"newComment\">
                         <form>
-                            <textarea id=\"newComment-textarea\" cols=\"30\" rows=\"10\"></textarea>
+                            <textarea id=\"comment\" cols=\"30\" rows=\"10\"></textarea>
                             <button id=\"btnSave\" onclick=\"saveComment(". $_SESSION["id"] . "," .$_GET["id"] . ")\">Guardar</button>
                         </form> 
                     </div>";
