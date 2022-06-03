@@ -14,10 +14,10 @@ function paintCart() {
 
     cartList.map(i => {
         HTML += `<div card-id="${i.id}">
-                    <p>${i.nameProduct}</p>
-                    <p>${i.nameProduct}</p>
-                    <p>${i.priceProduct}</p>
-                    <p>${i.amountProduct}</p>
+                    <p class="nameProduct">${i.nameProduct}</p>
+                    <p class="priceProduct">Precio: ${i.priceProduct}</p>
+                    <p class="amountProduct">Cantidad: ${i.amountProduct}</p>
+                    <p class="total">Total: ${i.priceProduct}*${i.amountProduct}</p>
                     <button onclick="remove(${i.id})">xd</button>
                 </div>`;
     });

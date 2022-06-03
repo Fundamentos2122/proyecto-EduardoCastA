@@ -49,7 +49,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION["photo"] = $user->getPhoto();
             $_SESSION["type"] = $user->getType();
 
-            header('Location: http://localhost/electrops/views/');
+            if($_SESSION["type"] === "normal") {
+                header('Location: http://localhost/electrops/views/');
+            } else if ($_SESSION["type"] === "administrator") {
+                header('Location: http://localhost/electrops/views/productsList.php');
+            }
+
             exit();
         }
         catch(PDOException $e) {

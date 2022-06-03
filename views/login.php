@@ -32,7 +32,7 @@
                 <input type="submit" value="Inciar sesión" class="primary-button">
             </div>
             <div class="text-start">
-                <p>¿No tienes cuenta? <a href="signup.php">Regístrate aquí</a></p>
+                <p>¿No tienes cuenta? <a href="signup.php" class="enlace">Regístrate aquí</a></p>
             </div>
         </form>
     </div>

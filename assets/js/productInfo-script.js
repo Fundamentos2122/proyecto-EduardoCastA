@@ -48,7 +48,7 @@ function paintInformation(data) {
                 </form>
                 <div class="buttons">
                     <button onclick="buy()" class="secondary-button">Comprar</button>
-                    <button onclick="addToCart() class="primary-button">Carrito</button>
+                    <button onclick="addToCart()" class="primary-button">Carrito</button>
                 </div>
             </div>
         </div>
@@ -79,6 +79,9 @@ function addToCart() {
         });
 
         id_compra = id_compra === temp ? 0 : (temp + 1);
+
+        temp = 0;
+
     }
     
     let compra = {

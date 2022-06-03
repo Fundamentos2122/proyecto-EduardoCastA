@@ -100,6 +100,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if($query->rowCount() === 0) {
                 header('Location: http://localhost/electrops/views/perfil.php?error=4');
             } else {
+                if(array_key_exists("photo", $_POST)){
+                    
+                }
                 header('Location: http://localhost/electrops/views/perfil.php');
             }
             

@@ -28,93 +28,33 @@
     <!-- Header -->
     <?php include 'layouts/header.php' ?>
 
-    <div class="information">
-        <br>
-        <div class="center">
+    <div class="perfil flex-center">
+        <div class="information">
+            <br>
             <?php
                 if($_SESSION["photo"] === ""){
-
-                    echo "No hay foto de perfil";
+                    echo "<img src=\"../assets/img/photoPerfilGeneric.png\" alt=\"Foto de perfil\" class=\"perfil-photo\">";
                 } else {
-                    echo "<img src=\"data:image/jpeg;base64," . $_SESSION["photo"] . "\" alt=\"\">";
+                    echo "<img src=\"data:image/jpeg;base64," . $_SESSION["photo"] . "\" alt=\"Foto de perfil\" class=\"perfil-photo\">";
                 }
             ?>
-            <h1 class="name">Nombre de usuario</h1>
-            
+            <?php
+                echo "<h1 class=\"name\">
+                        " . $_SESSION["name"] . "
+                        </h1>  
+                        <br>
+                        <h2 class=\"username\">
+                            " . $_SESSION["username"] . "
+                        </h2>";
+            ?>
         </div>
-        <br>
-        <div class="container" id="card-password">
-            <div class="center">
-                <h2>Contraseña</h2>
-            </div>
-            <br>
-            <div class="center">
-                <form class="form-password">
-                    <label for="actualPassword">Contraseña actual:</label>
-                    <input type="password" name="actualPassword">
-                    <label for="newPassword">Nueva contraseña:</label>
-                    <input type="password" name="newPassword">
-                    <label for="confirmPassword">Confirmar nueva contraseña:</label>
-                    <input type="password" name="confirmPassword">
-                    <input type="submit" value="Guardar" class="primary-button">
-                </form>
-            </div>
-        </div>
-        <div class="container" id="card-email">
-            <div class="center">
-                <h2>Contraseña</h2>
-            </div>
-            <br>
-            <div class="center">
-                <form class="form-password">
-                    <label for="actualPassword">Contraseña actual:</label>
-                    <input type="password" name="actualPassword">
-                    <label for="newPassword">Nueva contraseña:</label>
-                    <input type="password" name="newPassword">
-                    <label for="confirmPassword">Confirmar nueva contraseña:</label>
-                    <input type="password" name="confirmPassword">
-                    <input type="submit" value="Guardar" class="primary-button">
-                </form>
-            </div>
-        </div>
-        <br>
-        <div class="container" id="card-address">
-            <div class="center">
-                <h2>Dirección de envio y datos de contacto</h2>
-            </div>
-            <br>
-            <div class="center">
-                <form class="form-contact">
-                    <label for="country">País: </label>
-                    <input type="text" name="country">
-                    <label for="state">Estado: </label>
-                    <input type="text" name="state">
-                    <label for="city">Ciudad: </label>
-                    <input type="text" name="city">
-                    <label for="zipcode">Código postal: </label>
-                    <input type="text" name="zipCode">
-                    <label for="direction">Dirección</label>
-                    <input type="text" name="direction">
-                    <label for="phoneNumber">Número telefónico</label>
-                    <input type="text" name="phoneNumber">
-                    <input type="submit" value="Guardar" class="primary-button">
-                </form>
-            </div>
-        </div>
-        <br>
-        <div class="container" id="card-payment">
-            <div class="center">
-                <h2>Métodos de pago</h2>
-            </div>
-            <br>
-            <div class="center">
-                <form class="form-paymet-methods">
-                    <input type="submit" value="Agregar método de pago" class="primary-button">
-                </form>
-            </div>
+        <div class="actions">
+            <button onclick="changeEmail()" class="primary-button">Cambiar contraseña</button>
+            <button onclick="changePassword()" class="primary-button">Cambiar correo</button>
+            <button onclick="changePhoto()" class="primary-button">Cambiar foto</button>
         </div>
     </div>
-
+    
     <!-- Scripts -->
     <?php include '../assets/js/menu-script.php' ?>
 

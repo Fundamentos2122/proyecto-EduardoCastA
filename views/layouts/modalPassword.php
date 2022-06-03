@@ -7,10 +7,12 @@
                 <h2>Cambiar contraseña</h2>
             </div>
             <div class="modal-body">
-                <form action="../controllers/usersController.php" method="POST">
+                <form action="../controllers/usersControllers.php" method="POST">
                     <input type="hidden" name="_method" value="PUT">
-                    <input type="hidden" name="id" value="" id="form-edit-id">
-                    <textarea id="form-edit-text" name="text"></textarea>
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" required>
+                    <label for="passwordConfirm">Confirmar contraseña</label>
+                    <input type="password" name="passwordConfirm" required>
                     <input type="submit" value="Guardar">
                 </form>
             </div>

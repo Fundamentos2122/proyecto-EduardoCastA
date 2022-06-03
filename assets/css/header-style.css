@@ -55,6 +55,13 @@ body {
     right: 36px;
 }
 
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+
 @media (min-width: 768px) {
 
     .img-logo-header {

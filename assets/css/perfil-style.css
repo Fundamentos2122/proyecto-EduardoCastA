@@ -1,0 +1,70 @@
+.perfil {
+    display: flex;
+    flex-direction: column;
+}
+
+.information {
+    width: calc(100%-64px);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 1em;
+}
+
+.perfil-photo {
+    width: 120px;
+    height: 120px;
+}
+
+.name {
+    font-size: 16px;
+}
+
+.username {
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+button {
+    width: 150px;
+    margin-top: 0.8em;
+}
+
+@media (min-width: 768px) {
+
+    .perfil {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .perfil-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .username {
+        font-size: 16px;
+    }
+    
+    button {
+        width: 160px;
+        margin-top: 1em;
+    }
+
+}
