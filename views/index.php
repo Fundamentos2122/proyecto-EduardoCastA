@@ -41,7 +41,6 @@
             <img src="../assets/img/products6.jpg">
         </div>
         <br>
-        <div>
             <div class="dot-container">
                 <span class="dots" onclick="showSlides(0)"></span>
                 <span class="dots" onclick="showSlides(1)"></span>
@@ -50,7 +49,6 @@
                 <span class="dots" onclick="showSlides(4)"></span>
                 <span class="dots" onclick="showSlides(5)"></span>
             </div>
-        </div>
     </div>
 
     <script src="../assets/js/slider-script.js"></script>

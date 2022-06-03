@@ -30,6 +30,8 @@
 
     <div id="cart"></div>
 
+    <button onclick="removeAll()" class="primary-button">Comprar</button>
+
     <script src="../assets/js/cart-script.js"></script>
     <?php include '../assets/js/menu-script.php' ?>
 

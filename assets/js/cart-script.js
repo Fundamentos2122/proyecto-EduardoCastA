@@ -18,7 +18,7 @@ function paintCart() {
                     <p class="priceProduct">Precio: ${i.priceProduct}</p>
                     <p class="amountProduct">Cantidad: ${i.amountProduct}</p>
                     <p class="total">Total: ${i.priceProduct}*${i.amountProduct}</p>
-                    <button onclick="remove(${i.id})">Eliminar del carrito</button>
+                    <button onclick="remove(${i.id})" class="secondary-button">Eliminar del carrito</button>
                 </div>`;
     });
         
@@ -55,4 +55,13 @@ function getCartList() {
     }
 
     return cartList;
+}
+
+function removeAll() {
+
+    let cartList = getCartList();
+
+    cartList.map(i => {
+        i.remove();
+    });
 }
