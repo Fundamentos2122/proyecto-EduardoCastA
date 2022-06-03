@@ -14,6 +14,7 @@
 
     <!-- Header -->
     <?php include 'layouts/header.php' ?>
+    <?php include '../assets/js/menu-script.php' ?>
 
     <h1 class="title">Electro-PS</h1>
     <p class="grid-margin-p">Electro-PS es un sitio web de comercio electrónico, enfocado en la venta de componentes electrónicos y eléctricos, enfocados principalmente hacia estudiantes o interesados dentro de la materia que deseen desarrollar sus propios proyectos, nuestro propósito es brindarle productos de alta calidad de
@@ -53,7 +54,7 @@
     </div>
 
     <script src="../assets/js/slider-script.js"></script>
-    <?php include '../assets/js/menu-script.php' ?>
+    
 
 </body>
 </html>

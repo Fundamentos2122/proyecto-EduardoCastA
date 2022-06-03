@@ -10,6 +10,8 @@ try {
     exit();
 }
 
+
+
 if($_SERVER["REQUEST_METHOD"] === "GET") {
 
     //Obtener un solo registro
@@ -58,6 +60,8 @@ if($_SERVER["REQUEST_METHOD"] === "GET") {
     }
 
 } else if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    console_log( $_POST );
 
     if($_POST["_method"] === "POST") { //Agregar un producto
 
@@ -143,7 +147,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET") {
         try {
             
             $query = $connection->prepare('UPDATE products SET active = 0 WHERE id = :id');
-            $query->bindParam(':id', $_id, PDO::PARAM_INT);
+            $query->bindParam(':id', $id, PDO::PARAM_INT);
 
             if($query->rowCount === 0) {
                 header('Location: http://localhost/electrops/views/productsList.php?error=4');
@@ -156,6 +160,12 @@ if($_SERVER["REQUEST_METHOD"] === "GET") {
         }
 
     }
+}
+
+function console_log( $data ){
+    echo '<script>';
+    echo 'console.log('. json_encode( $data ) .')';
+    echo '</script>';
 }
 
 ?>
