@@ -31,7 +31,7 @@
     <h1 class="title">Nuevo producto</h1>
 
     <div class="card-newProduct">
-        <form action="../controllers/productsController.php" method="POST" class="form-edit" enctype="multipart/form-data">
+        <form action="../controllers/productsController.php" method="POST" autocomplete="off" class="form-edit" enctype="multipart/form-data">
         <input type="hidden" name="_method" value="POST">
             <div class="group-horizontal">         
                 <label for="name">Nombre</label>

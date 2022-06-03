@@ -5,7 +5,7 @@
                 <h2>Eliminar producto</h2>
             </div>
             <div class="modal-body">
-                <form action="../controllers/productsController.php" method="POST">
+                <form action="../controllers/productsController.php" method="POST" autocomplete="off">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="id" value="" id="form-delete-id">
                     <p>¿Seguro que desea eliminar este producto?</p>

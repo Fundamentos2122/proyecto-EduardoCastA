@@ -9,6 +9,6 @@
             <a href="signup.php" id="link4">Registrarse</a>
             <a id="linkImg3"><img src="../assets/icons/iconLogIn.png" id="img1"></a>
             <a id="linkImg4"><img src="../assets/icons/iconSignUp.png" id="img2"></a>
-            <span class="dot">0</span>
+            <span class="dot" id="number">0</span>
     </header>
 </div>

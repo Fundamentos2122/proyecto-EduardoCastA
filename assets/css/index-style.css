@@ -46,7 +46,7 @@ h1[class="title"], h2[class="products-title"]{
   background-color: rgba(0,0,0,0.8);
 }
 
-.dot {
+.dots {
   cursor: pointer;
   height: 15px;
   width: 15px;

@@ -143,7 +143,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET") {
         try {
             
             $query = $connection->prepare('UPDATE products SET active = 0 WHERE id = :id');
-            $query->bindParam(':id', $id, PDO::PARAM_INT);
+            $query->bindParam(':id', $_id, PDO::PARAM_INT);
 
             if($query->rowCount === 0) {
                 header('Location: http://localhost/electrops/views/productsList.php?error=4');

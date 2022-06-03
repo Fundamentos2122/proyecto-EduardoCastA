@@ -42,12 +42,12 @@
         <br>
         <div class="flex-center">
             <div class="dot-container">
-                <span class="dot" onclick="showSlides(0)"></span>
-                <span class="dot" onclick="showSlides(1)"></></span>
-                <span class="dot" onclick="showSlides(2)"></></span>
-                <span class="dot" onclick="showSlides(3)"></></span>
-                <span class="dot" onclick="showSlides(4)"></></span>
-                <span class="dot" onclick="showSlides(5)"></></span>
+                <span class="dots" onclick="showSlides(0)"></span>
+                <span class="dots" onclick="showSlides(1)"></span>
+                <span class="dots" onclick="showSlides(2)"></span>
+                <span class="dots" onclick="showSlides(3)"></span>
+                <span class="dots" onclick="showSlides(4)"></span>
+                <span class="dots" onclick="showSlides(5)"></span>
             </div>
         </div>
     </div>

@@ -31,7 +31,7 @@
     <h1 class="title">Editar producto</h1>
 
     <div class="card-editProduct">
-        <form action="../controllers/productsController.php" method="POST" class="form-edit" enctype="multipart/form-data">
+        <form action="../controllers/productsController.php" method="POST" autocomplete="off" class="form-edit" enctype="multipart/form-data">
             <input type="hidden" name="_method" value="PUT">
             <input type="hidden" name="id" value="" id="form-edit-id">
             <div class="group-horizontal">         

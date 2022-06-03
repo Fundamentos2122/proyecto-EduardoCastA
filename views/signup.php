@@ -18,7 +18,7 @@
     <h1 class="title">Registrarse</h1>
 
     <div class="card-signup">
-        <form  action="../controllers/usersController.php" method="POST" autocomplete="off" class="form-signup">
+        <form  action="../controllers/usersController.php" method="POST" autocomplete="off" class="form-signup" enctype="multipart/form-data">
             <input type="hidden" name="_method" value="POST">
             <div class="group-horizontal">
                 <label for="name">Nombre</label>
@@ -40,11 +40,15 @@
                 <label for="passwordConfirm">Confirmar contraseña</label>
                 <input type="password" name="passwordConfirm" required>
             </div>
+            <div class="group-horizontal">
+                <label for="photo">Foto</label>
+                <input type="file" name="photo" required>
+            </div>
             <div class="text-end">
                 <input type="submit" value="Registrarse" class="primary-button">
             </div>
             <div class="text-start">
-            <p>¿Ya tienes cuenta? <a href="login.php">Inicia sesión aquí</a></p>
+            <p>¿Ya tienes cuenta? <a href="login.php" class="enlace">Inicia sesión aquí</a></p>
             </div>  
         </form>
     </div>

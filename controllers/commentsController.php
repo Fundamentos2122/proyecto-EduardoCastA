@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET") {
         echo json_encode($comments);
 
     } catch(PDOException $e) {
-        echo e;
+        echo $e;
     }
 
 } else if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET") {
         $query->execute();
 
         if($quer->rowCount === 0) {
-            header('Location: http://localhost/electrops/views/productInfo.php?error=5';
+            header('Location: http://localhost/electrops/views/productInfo.php?error=5');
         } else {
             header('Location: http://localhost/electrops/views/productInfo.php?id=' + $product_id);
         }

@@ -32,11 +32,7 @@
         <div class="information">
             <br>
             <?php
-                if($_SESSION["photo"] === ""){
-                    echo "<img src=\"../assets/img/photoPerfilGeneric.png\" alt=\"Foto de perfil\" class=\"perfil-photo\">";
-                } else {
-                    echo "<img src=\"data:image/jpeg;base64," . $_SESSION["photo"] . "\" alt=\"Foto de perfil\" class=\"perfil-photo\">";
-                }
+                echo "<img src=\"data:image/jpeg;base64," . $_SESSION["photo"] . "\" alt=\"Foto de perfil\" class=\"perfil-photo\">";
             ?>
             <?php
                 echo "<h1 class=\"name\">
@@ -49,14 +45,28 @@
             ?>
         </div>
         <div class="actions">
-            <button onclick="changeEmail()" class="primary-button">Cambiar contraseña</button>
-            <button onclick="changePassword()" class="primary-button">Cambiar correo</button>
-            <button onclick="changePhoto()" class="primary-button">Cambiar foto</button>
+            <button onclick="changePassword()" class="primary-button">Cambiar contraseña</button>
+            <button onclick="changeEmail()" class="primary-button">Cambiar correo</button>
         </div>
     </div>
+    <br>
+
+    <div class="center">
+        <form action="../controllers/accessController.php" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Cerrar sesión" class="primary-button">
+        </form>
+    </div>
+    <br>
+
+    <?php include 'layouts/errorMessages.php' ?>
     
+    <?php include("layouts/modalEmail.php") ?>
+    <?php include("layouts/modalPassword.php") ?>
+
     <!-- Scripts -->
     <?php include '../assets/js/menu-script.php' ?>
+    <script src="../assets/js/perfil-script.js"></script>
 
 </body>
 </html>

@@ -5,6 +5,7 @@
     const link4 = document.getElementById("link4");
     const img1 = document.getElementById("img1");
     const img2 = document.getElementById("img2");
+    const number = document.getElementById("number");
 
     document.addEventListener("DOMContentLoaded", function() {
 
@@ -27,6 +28,7 @@
     });
 
     function changeHeaderUser(){
+        number.style.display = inline;
         img1.setAttribute("src","../assets/icons/iconPerfil.png");
         link3.setAttribute("href","perfil.php");
         link3.innerHTML = "Perfil";
@@ -46,8 +48,7 @@
     function changeHeaderAdmin(){
         link1.setAttribute("href","productsList.php");
         link1.innerHTML = "Productos";
-        link2.setAttribute("href","productsList.php");
-        link2.innerHTML = "Ventas";
+        link2.style.display = "none"
         img1.setAttribute("src","../assets/icons/iconPerfil.png");
         link3.setAttribute("href","perfil.php");
         link3.innerHTML = "Perfil ";

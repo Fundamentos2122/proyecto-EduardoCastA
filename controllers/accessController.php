@@ -66,6 +66,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
+
         session_destroy();
         header('Location: http://localhost/electrops/views');
         exit();

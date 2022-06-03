@@ -38,7 +38,7 @@ form[class="form-login"] > label, input{
     height: 25px;
 }
 
-a {
+.enlace {
     font-style: italic;
     color : #0645AD;
 }
