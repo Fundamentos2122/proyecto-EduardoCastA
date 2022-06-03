@@ -18,11 +18,10 @@ function paintCart() {
                     <p class="priceProduct">Precio: ${i.priceProduct}</p>
                     <p class="amountProduct">Cantidad: ${i.amountProduct}</p>
                     <p class="total">Total: ${i.priceProduct}*${i.amountProduct}</p>
-                    <button onclick="remove(${i.id})">xd</button>
+                    <button onclick="remove(${i.id})">Eliminar del carrito</button>
                 </div>`;
     });
         
-
     cart.innerHTML = HTML;
 }
 
@@ -43,9 +42,6 @@ function remove(id) {
     }, 150);
 }
 
-function painTotal() {
-    
-}
 
 function getCartList() {
     

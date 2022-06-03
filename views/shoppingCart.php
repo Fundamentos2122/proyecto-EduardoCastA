@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
     <link rel="stylesheet" href="../assets/css/general-style.css">
+    <link rel="stylesheet" href="../assets/css/header-style.css">
     <link rel="stylesheet" href="../assets/css/shoppingCart-style.css">
     <link rel="icon" href="../assets/icons/favicon.ico" type="image/png">
 </head>
 <body>
     
-<?php
+    <?php
 
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    }
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
 
-    if(!array_key_exists("username", $_SESSION)  || (array_key_exists("username", $_SESSION) && $_SESSION["type"] !== "normal")) {
-        header('Location: http://localhost/electrops/views/');
-        exit();
-    }
+        if(!array_key_exists("username", $_SESSION)  || (array_key_exists("username", $_SESSION) && $_SESSION["type"] !== "normal")) {
+            header('Location: http://localhost/electrops/views/');
+            exit();
+        }
 
-?>
+    ?>
 
     <!-- Header -->
-    <!-- <?php //include 'layouts/header.php' ?> -->
+    <?php include 'layouts/header.php' ?>
 
     <div id="cart"></div>
 

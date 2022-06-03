@@ -16,10 +16,10 @@
         }
 
             if(array_key_exists("id", $_SESSION)){
-                if($_SESSION["type"] === "normal"){
-                    echo "changeHeaderUser();";
-                } else {
+                if($_SESSION["type"] === "administrator"){
                     echo "changeHeaderAdmin()";
+                } else {
+                    echo "changeHeaderUser();";
                 }
             }
 
@@ -28,7 +28,7 @@
     });
 
     function changeHeaderUser(){
-        number.style.display = inline;
+        //number.style.display = inline;
         img1.setAttribute("src","../assets/icons/iconPerfil.png");
         link3.setAttribute("href","perfil.php");
         link3.innerHTML = "Perfil";
