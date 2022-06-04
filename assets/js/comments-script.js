@@ -46,3 +46,8 @@ function paintComments(list) {
     commentsSection.innerHTML = HTML;
 
 }
+
+function saveComment(user_id, product_id){
+    console.log(user_id);
+    console.log(product_id);
+}

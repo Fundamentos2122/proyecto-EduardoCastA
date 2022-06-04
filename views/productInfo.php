@@ -27,13 +27,19 @@
 
             if(array_key_exists("username", $_SESSION) || (array_key_exists("username", $_SESSION) && $_SESSION["type"] === "normal")) {
                 echo "<div id=\"newComment\">
-                        <form>
-                            <textarea id=\"comment\" cols=\"30\" rows=\"10\"></textarea>
-                            <button id=\"btnSave\" onclick=\"saveComment(". $_SESSION["id"] . "," .$_GET["id"] . ")\">Guardar</button>
+                        <form action=\"../controllers/commentsController.php\" method=\"POST\" autocomplete=\"off\">
+                            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+                            <input type=\"hidden\" name=\"user_username\" value=\"\" id=\"form-username-user\">
+                            <input type=\"hidden\" name=\"id_user\" value=\"\" id=\"form-id-user\">
+                            <input type=\"hidden\" name=\"id_product\" value=\"\" id=\"form-id-product\">
+                            <textarea name=\"comment\" cols=\"30\" rows=\"10\"></textarea>
+                            <input type=\"submit\" value=\"Guardar\">
                         </form> 
                     </div>";
             }
-            include 'layouts/errorMessages.php'
+
+            include 'layouts/errorMessages.php';
+
         ?>
         
         <div id="commentSection">
@@ -43,6 +49,7 @@
     
     <script src="../assets/js/productInfo-script.js"></script>
     <script src="../assets/js/comments-script.js"></script>
+    <script src="../assets/js/comment-information-script.js"></script>
     <?php include '../assets/js/menu-script.php' ?>
 
 </body>

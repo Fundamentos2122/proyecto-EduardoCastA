@@ -17,6 +17,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         $username = trim($_POST["username"]);
         $password = trim($_POST["password"]);
 
+        echo "<script> localStorage.remove(\"cart_list\"); </script>";
+
         try {
             $query = $connection->prepare('SELECT * FROM users WHERE username = :username');
             $query->bindParam(':username', $username, PDO::PARAM_STR);
@@ -66,6 +68,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
+
+        echo "<script> localStorage.remove(\"cart_list\"); </script>";
 
         session_destroy();
         header('Location: http://localhost/electrops/views');

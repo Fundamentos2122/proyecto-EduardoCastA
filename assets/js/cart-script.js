@@ -17,7 +17,7 @@ function paintCart() {
                     <p class="nameProduct">${i.nameProduct}</p>
                     <p class="priceProduct">Precio: ${i.priceProduct}</p>
                     <p class="amountProduct">Cantidad: ${i.amountProduct}</p>
-                    <p class="total">Total: ${i.priceProduct}*${i.amountProduct}</p>
+                    <p class="total">Total: ${i.priceProduct * i.amountProduct}</p>
                     <button onclick="remove(${i.id})" class="secondary-button">Eliminar del carrito</button>
                 </div>`;
     });
@@ -57,11 +57,41 @@ function getCartList() {
     return cartList;
 }
 
-function removeAll() {
+function comprar() {
 
     let cartList = getCartList();
 
     cartList.map(i => {
-        i.remove();
+        comprarIndividualmente(i);
     });
+    
+}
+
+function comprarIndividualmente(product) {
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.open("POST", "../controllers/salesController.php", true);
+
+    xhttp.setRequestHeader("Content-type", "application/json");
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4) {
+            if (this.status === 200) {
+                console.log(this.responseText);
+            }
+            else {
+                console.log("Error");
+            }
+        }
+    };
+
+    let data = {
+        nameProduct: product.nameProduct,
+        priceProduct: product.priceProduct,
+        amountProduct: product.amountProduct
+    };
+
+    xhttp.send(JSON.stringify(data));
+
 }

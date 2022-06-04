@@ -36,21 +36,23 @@ if($_SERVER["REQUEST_METHOD"] === "GET") {
 } else if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $comment = trim($_POST["comment"]);
+    $username_user = $_POST["user_username"];
     $id_user = $_POST["id_user"];
-    $product_id = $_POST["product_id"];
+    $id_product = intval($_POST["id_product"]);
 
     try {
         
-        $query = $connection->prepare('INSERT into comments VALUES(NULL, :comment, :id_user, :product_id)');
+        $query = $connection->prepare('INSERT into comments VALUES(NULL, :comment, :username_user, :id_user, :id_product)');
         $query->bindParam(':comment', $comment, PDO::PARAM_STR);
+        $query->bindParam(':username_user', $username_user, PDO::PARAM_STR);
         $query->bindParam(':id_user', $id_user, PDO::PARAM_INT);
-        $query->bindParam(':product_id', $product_id, PDO::PARAM_INT);
+        $query->bindParam(':id_product', $id_product, PDO::PARAM_INT);
         $query->execute();
 
-        if($quer->rowCount === 0) {
+        if($query->rowCount === 0) {
             header('Location: http://localhost/electrops/views/productInfo.php?error=5');
         } else {
-            header('Location: http://localhost/electrops/views/productInfo.php?id=' + $product_id);
+            header('Location: http://localhost/electrops/views/productInfo.php?id=' . $_POST["id_product"]);
         }
 
     } catch (PDOException $e) {
